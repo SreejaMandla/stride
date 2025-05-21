@@ -16,6 +16,7 @@ spec:
     spec:
       containers:
       - name: my-application
-        image: stride:latest
+        image: 0sreejamandla/stride
+
         ports:
         - containerPort: 80
