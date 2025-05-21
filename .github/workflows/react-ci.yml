@@ -12,7 +12,7 @@ env:
   GKE_CLUSTER: cluster-1
   GKE_ZONE: asia-south1-a  
   DEPLOYMENT_NAME: gke-test 
-  IMAGE:  gcr.io/test-project-449507/stride
+  #IMAGE:  gcr.io/test-project-449507/stride
 
 
 jobs:
@@ -36,9 +36,6 @@ jobs:
          project_id : test-project-449507
 
 
-      - run: |-
-          gcloud --quiet auth configure-docker
-
       - uses: google-github-actions/get-gke-credentials@v2
         with:
           cluster_name: cluster-1
@@ -49,7 +46,7 @@ jobs:
       - name: Build
         run: |-
          docker build \
-          --tag "gcr.io/test-project-449507/stride" \
+          --tag "0sreejamandla/stride" \
           --build-arg GITHUB_SHA="$GITHUB_SHA" \
           --build-arg GITHUB_REF="$GITHUB_REF" \
           .
@@ -57,7 +54,7 @@ jobs:
     # Push the Docker image to Google Container Registry
       - name: Publish
         run: |-
-         docker push "gcr.io/test-project-449507/stride"
+         docker push "0sreejamandla/stride"
 
     # Set up kustomize
       - name: Set up Kustomize
