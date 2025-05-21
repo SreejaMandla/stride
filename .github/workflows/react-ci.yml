@@ -9,7 +9,8 @@ env:
   PROJECT_ID: test-project-449507
   GKE_CLUSTER: cluster-1
   GKE_ZONE: asia-south1-a  
-  DEPLOYMENT_NAME: gke-test 
+  DEPLOYMENT_NAME: my-application
+  SERVICE_NAME: my-service
 
 jobs:
   setup-build-publish-deploy:
