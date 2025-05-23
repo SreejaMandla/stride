@@ -7,8 +7,8 @@ on:
 
 env:
   PROJECT_ID: test-project-449507
-  GKE_CLUSTER: cluster-1
-  GKE_ZONE: asia-south1-a  
+  GKE_CLUSTER: blockinfure-backend
+  GKE_ZONE: us-central1-c 
   DEPLOYMENT_NAME: my-application
   SERVICE_NAME: my-service
 
@@ -35,8 +35,8 @@ jobs:
       - name: Get GKE credentials
         uses: google-github-actions/get-gke-credentials@v2
         with:
-          cluster_name: cluster-1
-          location: asia-south1-a
+          cluster_name: blockinfure-backend
+          location: us-central1-c 
 
       - name: Build Docker image
         run: |-
