@@ -7,7 +7,7 @@ on:
 
 env:
   PROJECT_ID: test-project-449507
-  GKE_CLUSTER: blockinfure-backend
+  GKE_CLUSTER: blockinfura-backend
   GKE_ZONE: us-central1-c 
   DEPLOYMENT_NAME: my-application
   SERVICE_NAME: my-service
